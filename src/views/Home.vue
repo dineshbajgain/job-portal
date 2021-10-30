@@ -1,15 +1,17 @@
 <template>
   <div class="home">
-      {{jobs[0].title}}
+    <JobListVue :jobs="jobs"></JobListVue>
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent, ref } from 'vue';
+import JobListVue from '@/components/JobList.vue';
 import Job from '../types/job'
 export default defineComponent({
   name: 'Home',
   components: {
+    JobListVue
   },
   setup(){
 
